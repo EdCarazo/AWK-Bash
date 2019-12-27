@@ -1,0 +1,8 @@
+#!/bin/bash
+#comprime srts. si tiene exito, borra los originales
+
+tar -cf ~/bkps/$1.tar *.$1
+if [ $? -eq 0 ]; then 
+	echo "se supone que debo borrar"
+	rm -R *.$1
+fi 
